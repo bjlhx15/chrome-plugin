@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "demo-show-007-omnibox 测试",
+	"version": "1.0",
+	"description": "demo-show-007-omnibox 测试",
+	"author": "bjlhx15",
+	"icons": {
+		"48": "img/icon.png",
+		"128": "img/icon.png"
+	},
+	"browser_action": {
+		"default_icon": "img/icon.png",
+		"default_popup": "popup.html"
+	},
+	// 会一直常驻的后台JS或后台页面
+	"background": {
+		// 2种指定方式，如果指定JS，那么会自动生成一个背景页
+		//"page": "background.html"
+		"scripts": ["js/background.js"]
+	},
+	// 向地址栏注册一个关键字以提供搜索建议，只能设置一个关键字
+	"omnibox": { "keyword" : "go" }
+}
